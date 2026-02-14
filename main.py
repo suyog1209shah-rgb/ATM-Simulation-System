@@ -8,3 +8,7 @@ if entered_pin == pin:
         print("2. Deposit Money")
         print("3. Withdraw Money")
         print("4. Exit")
+        choice = input("Choose an option: ")
+        if choice == "1":
+            print("Your balance is:", balance)
+
