@@ -11,4 +11,8 @@ if entered_pin == pin:
         choice = input("Choose an option: ")
         if choice == "1":
             print("Your balance is:", balance)
+            elif choice == "2":
+            amount = int(input("Enter deposit amount: "))
+            balance += amount
+            print("Amount deposited successfully.")
 
