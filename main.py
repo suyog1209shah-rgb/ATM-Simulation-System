@@ -20,3 +20,5 @@ if entered_pin == pin:
             if amount <= balance:
                 balance -= amount
                 print("Please collect your cash.")
+            else:
+                print("Insufficient balance.")
