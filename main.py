@@ -22,3 +22,6 @@ if entered_pin == pin:
                 print("Please collect your cash.")
             else:
                 print("Insufficient balance.")
+        elif choice == "4":
+            print("Thank you for using the ATM.")
+            break
