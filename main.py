@@ -25,3 +25,5 @@ if entered_pin == pin:
         elif choice == "4":
             print("Thank you for using the ATM.")
             break
+        else:
+            print("Invalid choice. Try again.")
