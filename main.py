@@ -27,3 +27,5 @@ if entered_pin == pin:
             break
         else:
             print("Invalid choice. Try again.")
+    else:
+        print("Incorrect PIN. Access denied.")
