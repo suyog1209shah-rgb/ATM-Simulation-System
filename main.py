@@ -6,32 +6,39 @@ root.geometry("400x400")
 root.configure(bg="lightblue")
 balance = 10000
 pin = "1234"
-entered_pin = input("Enter your PIN: ")
-if entered_pin == pin:
-    while True:
-        print("\n--- ATM MENU ---")
-        print("1. Check Balance")
-        print("2. Deposit Money")
-        print("3. Withdraw Money")
-        print("4. Exit")
-        choice = input("Choose an option: ")
-        if choice == "1":
-            print("Your balance is:", balance)
-        elif choice == "2":
-            amount = int(input("Enter deposit amount: "))
-            balance += amount
-            print("Amount deposited successfully.")
-        elif choice == "3":
-            amount = int(input("Enter withdrawal amount: "))
-            if amount <= balance:
-                balance -= amount
-                print("Please collect your cash.")
-            else:
-                print("Insufficient balance.")
-        elif choice == "4":
-            print("Thank you for using the ATM.")
-            break
-        else:
-            print("Invalid choice. Try again.")
+def login():
+    entered_pin = pin_entry.get()
+    if entered_pin == correct_pin:
+        messagebox.showinfo("Login Success", "Welcome to ATM")
+        show_menu()
     else:
-        print("Incorrect PIN. Access denied.")
+        messagebox.showerror("Error", "Incorrect PIN")
+def show_menu():
+    login_frame.pack_forget()
+    menu_frame.pack()
+def check_balance():
+    messagebox.showinfo("Balance", f"Your current balance is Rs. {balance}")
+def deposit():
+    global balance
+    amount = amount_entry.get()
+    if amount.isdigit():
+        balance += int(amount)
+        messagebox.showinfo("Success", "Amount Deposited Successfully")
+        amount_entry.delete(0, tk.END)
+    else:
+        messagebox.showerror("Error", "Enter valid amount")
+def withdraw():
+    global balance
+    amount = amount_entry.get()
+    if amount.isdigit():
+        amount = int(amount)
+        if amount <= balance:
+            balance -= amount
+            messagebox.showinfo("Success", "Withdrawal Successful")
+            amount_entry.delete(0, tk.END)
+        else:
+            messagebox.showerror("Error", "Insufficient Balance")
+    else:
+        messagebox.showerror("Error", "Enter valid amount")
+def exit_app():
+    root.destroy()
