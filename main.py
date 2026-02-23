@@ -1,5 +1,9 @@
 import tkinter as tk
 from tkinter import messagebox
+root = tk.Tk()
+root.title("ATM Simulator System")
+root.geometry("400x400")
+root.configure(bg="lightblue")
 balance = 10000
 pin = "1234"
 entered_pin = input("Enter your PIN: ")
