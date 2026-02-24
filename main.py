@@ -46,3 +46,6 @@ def exit_app():
 login_frame = tk.Frame(root, bg="lightblue")
 login_frame.pack(pady=50)
 tk.Label(login_frame, text="Enter PIN", font=("Arial", 14), bg="lightblue").pack(pady=10)
+pin_entry = tk.Entry(login_frame, show="*", font=("Arial", 14))
+pin_entry.pack(pady=10)
+tk.Button(login_frame, text="Login", command=login, width=15, bg="green", fg="white").pack(pady=10)
