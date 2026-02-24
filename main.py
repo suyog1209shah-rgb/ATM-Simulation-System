@@ -5,7 +5,7 @@ root.title("ATM Simulator System")
 root.geometry("400x400")
 root.configure(bg="lightblue")
 balance = 10000
-pin = "1234"
+correct_pin = "1234"
 def login():
     entered_pin = pin_entry.get()
     if entered_pin == correct_pin:
@@ -42,3 +42,7 @@ def withdraw():
         messagebox.showerror("Error", "Enter valid amount")
 def exit_app():
     root.destroy()
+
+login_frame = tk.Frame(root, bg="lightblue")
+login_frame.pack(pady=50)
+tk.Label(login_frame, text="Enter PIN", font=("Arial", 14), bg="lightblue").pack(pady=10)
