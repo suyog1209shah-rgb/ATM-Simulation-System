@@ -49,3 +49,7 @@ tk.Label(login_frame, text="Enter PIN", font=("Arial", 14), bg="lightblue").pack
 pin_entry = tk.Entry(login_frame, show="*", font=("Arial", 14))
 pin_entry.pack(pady=10)
 tk.Button(login_frame, text="Login", command=login, width=15, bg="green", fg="white").pack(pady=10)
+menu_frame = tk.Frame(root, bg="lightblue")
+tk.Button(menu_frame, text="Check Balance", command=check_balance, width=20).pack(pady=10)
+tk.Button(menu_frame, text="Deposit", command=deposit, width=20).pack(pady=10)
+tk.Button(menu_frame, text="Withdraw", command=withdraw, width=20).pack(pady=10)
