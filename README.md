@@ -13,3 +13,7 @@ This project is a simple ATM Simulator System developed using Python Tkinter GUI
 ## Technologies Used
 - Python
 - Tkinter (GUI Library)
+
+## Default Login
+PIN: 1234  
+Starting Balance: Rs. 1000
