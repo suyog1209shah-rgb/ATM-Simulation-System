@@ -10,3 +10,6 @@ This project is a simple ATM Simulator System developed using Python Tkinter GUI
 - Withdraw Money
 - Exit System
 
+## Technologies Used
+- Python
+- Tkinter (GUI Library)
